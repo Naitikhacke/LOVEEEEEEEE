@@ -4,12 +4,14 @@ if (typeof lucide !== 'undefined') {
 }
 
 // Countdown Timer Logic
-// Set the target date to exactly 24 hours from now
-const countDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+// Set the target date to exactly midnight tonight
+const countDate = new Date();
+countDate.setHours(24, 0, 0, 0);
+const targetTime = countDate.getTime();
 
 const countdown = () => {
   const now = new Date().getTime();
-  const gap = countDate - now;
+  const gap = targetTime - now;
 
   if (gap <= 0) return; // Stop if it reaches 0
 
