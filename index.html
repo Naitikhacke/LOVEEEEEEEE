@@ -22,17 +22,9 @@
       <img src="https://win98icons.alexmeub.com/icons/png/notepad-0.png" alt="Letter">
       <span>Letter.txt</span>
     </div>
-    <div class="desktop-icon" onclick="toggleWindow('win-shoes')">
-      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Shoes">
-      <span>shoes.jpg</span>
-    </div>
-    <div class="desktop-icon" onclick="toggleWindow('win-photo1')">
-      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Photo 1">
-      <span>photo1.png</span>
-    </div>
-    <div class="desktop-icon" onclick="toggleWindow('win-photo2')">
-      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Photo 2">
-      <span>photo2.jpg</span>
+    <div class="desktop-icon" onclick="toggleWindow('win-photos')">
+      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Photos">
+      <span>Photos</span>
     </div>
     <div class="desktop-icon" onclick="toggleWindow('win-timer')">
       <img src="https://win98icons.alexmeub.com/icons/png/clock-1.png" alt="Timer">
@@ -146,79 +138,31 @@
       </div>
     </div>
 
-    <!-- Window 4: Shoes Photo -->
-    <div class="xp-window" id="win-shoes">
+    <!-- Window 4: Photos Carousel -->
+    <div class="xp-window" id="win-photos">
       <div class="xp-titlebar">
         <div class="xp-title-text">
           <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
-          shoes.jpg - Windows Picture and Fax Viewer
+          Photos - Windows Picture and Fax Viewer
         </div>
         <div class="xp-controls">
           <button class="xp-btn">_</button>
           <button class="xp-btn">□</button>
-          <button class="xp-btn close" onclick="closeWindow('win-shoes')">X</button>
+          <button class="xp-btn close" onclick="closeWindow('win-photos')">X</button>
         </div>
       </div>
       <div class="xp-body">
         <div class="photo-viewer">
-          <img src="assets/shoes.jpg" alt="Our Shoes">
-          <div style="display: flex; gap: 5px; margin-top: 5px;">
-             <button style="width: 25px; height: 25px; cursor: pointer; font-weight: bold; font-family: Tahoma;" onclick="zoomIn(this)">+</button>
-             <button style="width: 25px; height: 25px; cursor: pointer; font-weight: bold; font-family: Tahoma;" onclick="zoomOut(this)">-</button>
+          <img src="assets/shoes.jpg" alt="Photo" id="carousel-img">
+          <div style="display: flex; gap: 5px; margin-top: 5px; justify-content: center;">
+             <button style="width: 25px; height: 25px; cursor: pointer; font-weight: bold; font-family: Tahoma;" onclick="prevPhoto()">&lt;</button>
+             <button style="width: 25px; height: 25px; cursor: pointer; font-weight: bold; font-family: Tahoma;" onclick="nextPhoto()">&gt;</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Window 5: Photo 1 -->
-    <div class="xp-window" id="win-photo1" style="display: none;">
-      <div class="xp-titlebar">
-        <div class="xp-title-text">
-          <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
-          photo1.png - Windows Picture and Fax Viewer
-        </div>
-        <div class="xp-controls">
-          <button class="xp-btn">_</button>
-          <button class="xp-btn">□</button>
-          <button class="xp-btn close" onclick="closeWindow('win-photo1')">X</button>
-        </div>
-      </div>
-      <div class="xp-body">
-        <div class="photo-viewer">
-          <img src="assets/photo1.png" alt="Photo 1">
-          <div style="display: flex; gap: 5px; margin-top: 5px;">
-             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_in-0.png" width="16"></button>
-             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_out-0.png" width="16"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Window 6: Photo 2 -->
-    <div class="xp-window" id="win-photo2" style="display: none;">
-      <div class="xp-titlebar">
-        <div class="xp-title-text">
-          <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
-          photo2.jpg - Windows Picture and Fax Viewer
-        </div>
-        <div class="xp-controls">
-          <button class="xp-btn">_</button>
-          <button class="xp-btn">□</button>
-          <button class="xp-btn close" onclick="closeWindow('win-photo2')">X</button>
-        </div>
-      </div>
-      <div class="xp-body">
-        <div class="photo-viewer">
-          <img src="assets/photo2.jpg" alt="Photo 2">
-          <div style="display: flex; gap: 5px; margin-top: 5px;">
-             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_in-0.png" width="16"></button>
-             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_out-0.png" width="16"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Window 7: Countdown -->
+    <!-- Window 5: Countdown -->
     <div class="xp-window" id="win-timer">
       <div class="xp-titlebar">
         <div class="xp-title-text">
@@ -263,7 +207,7 @@
     <div class="taskbar-items">
       <div class="taskbar-item" onclick="toggleWindow('win-welcome')">Welcome.exe</div>
       <div class="taskbar-item" onclick="toggleWindow('win-letter')">Letter.txt</div>
-      <div class="taskbar-item" onclick="toggleWindow('win-shoes')">shoes.jpg</div>
+      <div class="taskbar-item" onclick="toggleWindow('win-photos')">Photos</div>
     </div>
   </div>
 

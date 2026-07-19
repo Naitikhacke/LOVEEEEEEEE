@@ -36,18 +36,16 @@ const countdown = () => {
 setInterval(countdown, 1000);
 countdown(); // Run immediately
 
-// Zoom Functions
-function zoomIn(btn) {
-  const img = btn.closest('.photo-viewer').querySelector('img');
-  let currentWidth = img.clientWidth;
-  if (!currentWidth) currentWidth = img.getBoundingClientRect().width;
-  img.style.width = (currentWidth * 1.2) + 'px';
-  img.style.maxWidth = 'none'; // allow zooming past container
+// Photo Carousel Functions
+const photos = ['assets/shoes.jpg', 'assets/photo1.png', 'assets/photo2.jpg'];
+let currentPhotoIndex = 0;
+
+function prevPhoto() {
+  currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+  document.getElementById('carousel-img').src = photos[currentPhotoIndex];
 }
 
-function zoomOut(btn) {
-  const img = btn.closest('.photo-viewer').querySelector('img');
-  let currentWidth = img.clientWidth;
-  if (!currentWidth) currentWidth = img.getBoundingClientRect().width;
-  img.style.width = (currentWidth * 0.8) + 'px';
+function nextPhoto() {
+  currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+  document.getElementById('carousel-img').src = photos[currentPhotoIndex];
 }
