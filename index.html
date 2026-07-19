@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows XP - For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Desktop Icons -->
+  <div class="desktop-icons">
+    <div class="desktop-icon" onclick="toggleWindow('win-welcome')">
+      <img src="https://win98icons.alexmeub.com/icons/png/msg_information-0.png" alt="Welcome">
+      <span>Welcome.exe</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-reasons')">
+      <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="Reasons">
+      <span>why_i_love_you</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-letter')">
+      <img src="https://win98icons.alexmeub.com/icons/png/notepad-0.png" alt="Letter">
+      <span>Letter.txt</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-shoes')">
+      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Shoes">
+      <span>shoes.jpg</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-photo1')">
+      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Photo 1">
+      <span>photo1.png</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-photo2')">
+      <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="Photo 2">
+      <span>photo2.jpg</span>
+    </div>
+    <div class="desktop-icon" onclick="toggleWindow('win-timer')">
+      <img src="https://win98icons.alexmeub.com/icons/png/clock-1.png" alt="Timer">
+      <span>Countdown.exe</span>
+    </div>
+  </div>
+
+  <!-- Windows Container -->
+  <div class="window-container">
+    
+    <!-- Window 1: Welcome -->
+    <div class="xp-window" id="win-welcome">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/msg_information-0.png" alt="icon">
+          Welcome.exe
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-welcome')">X</button>
+        </div>
+      </div>
+      <div class="xp-body">
+        <div style="display: flex; gap: 15px; align-items: center; background: white; padding: 20px; border: 1px solid #7f9db9;">
+          <div style="font-size: 48px; line-height: 1; display: inline-block; width: 48px; text-align: center;">❤️</div>
+          <div>
+            <h2 style="font-size: 18px; margin-bottom: 5px;">IT'S YOUR BIRTHDAY EVE</h2>
+            <p style="font-size: 13px;">Before the world celebrates you, I just wanted a moment with you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 2: Reasons -->
+    <div class="xp-window" id="win-reasons">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="icon">
+          C:\Reasons\why_i_love_you
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-reasons')">X</button>
+        </div>
+      </div>
+      <div class="xp-body" style="padding: 0;">
+        <div style="background: #ece9d8; padding: 2px 5px; font-size: 12px; border-bottom: 1px solid #fff;">
+          <span style="margin-right: 10px;"><u>F</u>ile</span>
+          <span style="margin-right: 10px;"><u>E</u>dit</span>
+          <span style="margin-right: 10px;"><u>V</u>iew</span>
+          <span style="margin-right: 10px;">F<u>a</u>vorites</span>
+          <span style="margin-right: 10px;"><u>T</u>ools</span>
+          <span><u>H</u>elp</span>
+        </div>
+        <div style="padding: 15px;">
+          <div class="reasons-grid">
+            <div class="reason-icon">
+              <img src="https://win98icons.alexmeub.com/icons/png/user_computer-0.png" alt="you">
+              <span>you.</span>
+            </div>
+            <div class="reason-icon">
+              <div style="font-size: 32px; line-height: 1; display: inline-block; width: 32px; height: 32px; text-align: center;">⭐</div>
+              <span>your soul.</span>
+            </div>
+            <div class="reason-icon">
+              <img src="https://win98icons.alexmeub.com/icons/png/camera3-0.png" alt="memories">
+              <span>our memories.</span>
+            </div>
+            <div class="reason-icon">
+              <img src="https://win98icons.alexmeub.com/icons/png/cd_audio_cd_a-0.png" alt="voice">
+              <span>your voice.</span>
+            </div>
+            <div class="reason-icon">
+              <div style="font-size: 32px; line-height: 1; display: inline-block; width: 32px; height: 32px; text-align: center;">❤️</div>
+              <span>your heart.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 3: Letter -->
+    <div class="xp-window" id="win-letter">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/notepad-0.png" alt="icon">
+          Letter.txt - Notepad
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-letter')">X</button>
+        </div>
+      </div>
+      <div class="xp-body" style="padding: 0;">
+        <div style="background: var(--xp-bg); padding: 2px 5px; font-size: 12px; border-bottom: 1px solid #fff;">
+          <span style="margin-right: 10px;"><u>F</u>ile</span>
+          <span style="margin-right: 10px;"><u>E</u>dit</span>
+          <span style="margin-right: 10px;"><u>F</u>ormat</span>
+          <span style="margin-right: 10px;"><u>V</u>iew</span>
+          <span><u>H</u>elp</span>
+        </div>
+        <div class="notepad-body">
+          Hey Raj.<br><br>
+          It's the night before your special day and I couldn't let it pass without telling you how insanely special you are to me.<br><br>
+          Tomorrow is all about you, but tonight... it's our little quiet moment.<br><br>
+          I love you
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 4: Shoes Photo -->
+    <div class="xp-window" id="win-shoes">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
+          shoes.jpg - Windows Picture and Fax Viewer
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-shoes')">X</button>
+        </div>
+      </div>
+      <div class="xp-body">
+        <div class="photo-viewer">
+          <img src="assets/shoes.jpg" alt="Our Shoes">
+          <div style="display: flex; gap: 5px; margin-top: 5px;">
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_in-0.png" width="16"></button>
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_out-0.png" width="16"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 5: Photo 1 -->
+    <div class="xp-window" id="win-photo1" style="display: none;">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
+          photo1.png - Windows Picture and Fax Viewer
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-photo1')">X</button>
+        </div>
+      </div>
+      <div class="xp-body">
+        <div class="photo-viewer">
+          <img src="assets/photo1.png" alt="Photo 1">
+          <div style="display: flex; gap: 5px; margin-top: 5px;">
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_in-0.png" width="16"></button>
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_out-0.png" width="16"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 6: Photo 2 -->
+    <div class="xp-window" id="win-photo2" style="display: none;">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/image_file-0.png" alt="icon">
+          photo2.jpg - Windows Picture and Fax Viewer
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-photo2')">X</button>
+        </div>
+      </div>
+      <div class="xp-body">
+        <div class="photo-viewer">
+          <img src="assets/photo2.jpg" alt="Photo 2">
+          <div style="display: flex; gap: 5px; margin-top: 5px;">
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_in-0.png" width="16"></button>
+             <button style="width: 25px; height: 25px;"><img src="https://win98icons.alexmeub.com/icons/png/zoom_out-0.png" width="16"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Window 7: Countdown -->
+    <div class="xp-window" id="win-timer">
+      <div class="xp-titlebar">
+        <div class="xp-title-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/clock-1.png" alt="icon">
+          Countdown.exe
+        </div>
+        <div class="xp-controls">
+          <button class="xp-btn">_</button>
+          <button class="xp-btn">□</button>
+          <button class="xp-btn close" onclick="closeWindow('win-timer')">X</button>
+        </div>
+      </div>
+      <div class="xp-body timer-content">
+        <h3 style="font-size: 14px; margin-bottom: 10px;">TOMORROW IS ALL YOURS</h3>
+        <div style="background: white; border: 1px solid #7f9db9; padding: 20px;">
+          <div class="countdown-timer">
+            <div class="time-box">
+              <span id="hours">24</span>
+              <label>HOURS</label>
+            </div>
+            <div class="time-box">
+              <span id="minutes">00</span>
+              <label>MINUTES</label>
+            </div>
+            <div class="time-box">
+              <span id="seconds">00</span>
+              <label>SECONDS</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End window-container -->
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <button class="start-btn">
+      <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" width="16" style="margin-right: 4px; filter: hue-rotate(150deg);"> 
+      start
+    </button>
+    <div class="taskbar-items">
+      <div class="taskbar-item" onclick="toggleWindow('win-welcome')">Welcome.exe</div>
+      <div class="taskbar-item" onclick="toggleWindow('win-letter')">Letter.txt</div>
+      <div class="taskbar-item" onclick="toggleWindow('win-shoes')">shoes.jpg</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleWindow(id) {
+      const win = document.getElementById(id);
+      if (win.style.display === 'none') {
+        win.style.display = 'block';
+      }
+      // Scroll to it so it's in view
+      win.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function closeWindow(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
